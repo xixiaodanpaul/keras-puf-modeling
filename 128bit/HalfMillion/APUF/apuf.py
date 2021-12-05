@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from sklearn import cross_validation
+#from sklearn import cross_validation
 from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import Dense,Dropout
@@ -24,7 +24,7 @@ numpy.random.seed(42)
 # split into input (X) and output (Y) variables
 X = df1.iloc[:9999,:129]
 Y = df2.iloc[:9999,:]
-train_features, test_features, train_labels, test_labels = cross_validation.train_test_split(X, Y, test_size = 0.2, random_state = 42)
+train_features, test_features, train_labels, test_labels = train_test_split(X, Y, test_size = 0.2, random_state = 42)
 # create model
 model = Sequential()
 
